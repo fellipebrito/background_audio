@@ -1,0 +1,23 @@
+<button id="unmuteButton">&#128263;</button>
+<button id="testingEvent">HAHAHA</button>
+
+<audio id="saber" src="coolsaber.mp3"></audio>
+<audio id="soundtrack" muted src="duel.mp3" loop>
+
+<script>
+    unmuteButton.addEventListener('click', function() {
+        if (soundtrack.muted){
+            soundtrack.play();
+            soundtrack.muted = false;
+            unmuteButton.innerHTML = '&#128266;';
+        } else {
+            soundtrack.muted = true;
+            unmuteButton.innerHTML = '&#128263;';
+        }
+    });
+
+    testingEvent.addEventListener('click', function() {
+        sound = document.getElementById("saber");
+        sound.play();
+    });
+</script>
